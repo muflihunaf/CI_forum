@@ -39,6 +39,8 @@
             <input type="text" name="nim" placeholder="NIM"><br>
             <?= form_error('nim', '<small>','</small>') ?>
             <br>
+            <input type="email" name="email" placeholder="Email"><br>
+            <?= form_error('email', '<small>','</small>') ?><br>
             <input type="text" name="nama" placeholder="Nama"><br>
             <?= form_error('nama', '<small>','</small>') ?><br>
             <input type="text" name="username" placeholder="Username"><br>
@@ -46,11 +48,10 @@
             <input type="password" name="password" placeholder="Kata sandi"><br><br>
             <?= form_error('password', '<small>','</small>') ?>
             <input type="password" name="password2" placeholder="Ulangi kata sandi"><br><br>
-            <input type="email" name="email" placeholder="Email"><br>
-            <?= form_error('email', '<small>','</small>') ?><br>
             <button type="submit" >Daftar</button><br><br> Sudah punya akun?<a href="login.html">Masuk</a>
         </form>
     </div>
+    <br><br>
     <div class="footer">
         <p>Copyright &copy; 2020 SIAP<br> All rights reserved</p>
     </div>

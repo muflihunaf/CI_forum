@@ -107,25 +107,24 @@ nav ul {
     padding: 40px;
     padding-top: 30px;
     width: 250px;
-    height: 410px;
+    height: 350px;
     margin: auto;
     margin-top: 110px;
     border-radius: 20px;
     color: white;
-    margin-bottom: 100px;
 }
 
 .sign-up {
     background: #62D2A2;
     padding: 40px;
     padding-top: 30px;
+    margin-bottom: 50px;
     width: 250px;
-    height: 410px;
+    height: 450px;
     margin: auto;
     margin-top: 110px;
     border-radius: 20px;
     color: white;
-    margin-bottom: 50px;
 }
 
 form {
@@ -161,7 +160,7 @@ button {
     text-align: center;
 }
 
-button:hover {
+input[type=button]:hover {
     color: #fff;
     background-color: #1FAB98;
 }
@@ -199,7 +198,6 @@ a:hover {
     background-color: #1FAB98;
     color: white;
     text-align: center;
-    margin-top: 100px;
 }
 
 * {
