@@ -1,0 +1,308 @@
+* {
+    margin: 0px auto;
+    padding: 0px auto;
+}
+
+body {
+    overflow-x: hidden;
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
+    background-color: #D7FBE8;
+    background-attachment: fixed;
+}
+
+.header {
+    height: 80px;
+    background: #1FAB98;
+    width: 100%;
+    position: fixed;
+    z-index: 2;
+}
+
+nav ul {
+    display: flex;
+}
+
+.menu {
+    float: right;
+    margin-top: 25px;
+}
+
+.menu ul li {
+    list-style: none;
+    float: right;
+}
+
+.menu ul li a {
+    margin-right: 30px;
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.menu-toggle {
+    padding-top: 5px;
+    display: none;
+    flex-direction: column;
+    height: 20px;
+    justify-content: space-between;
+    position: relative;
+    padding-right: 30px;
+}
+
+.menu-toggle input {
+    position: absolute;
+    width: 40px;
+    height: 30px;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: white;
+    border-radius: 3px;
+    transition: all 0.5s;
+}
+
+
+/*animasi toggle*/
+
+.menu-toggle span:nth-child(2) {
+    transform-origin: 0 0;
+}
+
+.menu-toggle span:nth-child(4) {
+    transform-origin: 0 100%;
+}
+
+.menu-toggle input:checked~span:nth-child(2) {
+    transform: rotate(45deg) translate(-1px, -1px);
+}
+
+.menu-toggle input:checked~span:nth-child(4) {
+    transform: rotate(-45deg) translate(-1px, 0);
+}
+
+.menu-toggle input:checked~span:nth-child(3) {
+    opacity: 0;
+    transform: scale(0);
+}
+
+.line {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 30%;
+}
+
+.title {
+    font-size: 20px;
+    font-family: 'Lucida Sans';
+    text-align: center;
+    color: #1FAB98;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+.forum {
+    width: 70%;
+    align-items: center;
+    padding: 0px 30px;
+    color: #1FAB98;
+}
+
+.row {
+    margin: 0px;
+}
+
+.row:after {
+    content: "";
+    display: flex;
+    flex-direction: column;
+    clear: both;
+}
+
+.column {
+    float: left;
+    width: 32%;
+    padding: 5px;
+}
+
+@media screen and (max-width: 1220px) {
+    .column {
+        width: 31.2%;
+    }
+    .judul {
+        font-size: 14px;
+    }
+}
+
+.column:hover {
+    transition: 0.25s;
+    padding-left: 5px 2px;
+    box-shadow: 0px 0px 4px 4px #1FAB98;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    text-align: left;
+    background-color: #f1f1f1;
+}
+
+.username {
+    float: left;
+}
+
+.time-min {
+    float: right;
+    padding-top: 4px;
+    font-size: 13px;
+}
+
+.title-com {
+    text-decoration: none;
+    font-size: 20px;
+    font-family: 'Lucida Sans';
+    color: #1FAB98;
+}
+
+.title-com:hover {
+    color: #9DF3C4;
+}
+
+.tag {
+    float: left;
+    color: darkgray;
+    margin-left: -40px;
+}
+
+.tag ul li {
+    list-style: none;
+    float: left;
+    margin-right: 5px;
+    font-size: 10px;
+}
+
+.status {
+    text-align: left;
+    font-style: italic;
+    font-family: 'Calibri';
+    color: silver;
+}
+
+.menu ul li a:hover {
+    color: #9DF3C4;
+}
+
+.brand {
+    float: left;
+    margin-top: 5px;
+    margin-left: 37px;
+}
+
+.img-brand {
+    height: 70px;
+    width: 240px;
+}
+
+.footer {
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #1FAB98;
+    color: white;
+    text-align: center;
+    margin-top: 50px;
+}
+
+h1 {
+    color: #1FAB98;
+    padding-top: 25px;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+.judul {
+    background: url('../img/bg-title.png');
+    width: 70%;
+    background-size: cover;
+    padding: 25px 0px;
+    height: 200px;
+}
+
+@media screen and (max-width: 800px) {
+    .menu-toggle {
+        display: flex;
+    }
+    nav ul {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 35%;
+        height: 100vh;
+        justify-content: space-evenly;
+        flex-direction: column;
+        background-color: #1FAB98;
+        transform: translateX(100%);
+        transition: all 1s;
+        opacity: 0
+    }
+    nav ul.slide {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@media screen and (max-width: 620px) {
+    .judul {
+        width: 100%;
+        font-size: 13px;
+    }
+    .title {
+        font-size: 15px;
+    }
+    .line {
+        width: 60%;
+    }
+    .forum {
+        width: 80%;
+    }
+    .column {
+        float: left;
+        width: 100%;
+        display: block;
+        padding: 5px 0px;
+    }
+    .tag ul li {
+        font-size: 11.5px;
+        margin-right: 8px;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .menu-toggle {
+        margin-right: -20px;
+    }
+    .brand {
+        margin-left: 12px;
+    }
+    .username {
+        font-size: 14px;
+    }
+    .time-min {
+        font-size: 10px;
+    }
+    .title {
+        font-size: 14px;
+    }
+    .status {
+        font-size: 12px;
+    }
+    .title-com {
+        font-size: 18px;
+    }
+}

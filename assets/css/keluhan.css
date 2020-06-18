@@ -1,0 +1,285 @@
+body {
+    overflow-x: hidden;
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
+    background-color: #D7FBE8;
+    background-attachment: fixed;
+}
+
+.header {
+    height: 80px;
+    background: #1FAB98;
+    position: fixed;
+    width: 100%;
+    margin-top: -110px;
+}
+
+nav ul {
+    display: flex;
+}
+
+.menu {
+    float: right;
+    margin-top: 25px;
+}
+
+.menu ul li {
+    list-style: none;
+    float: right;
+}
+
+.menu ul li a {
+    margin-right: 32px;
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.menu-toggle {
+    padding-top: 5px;
+    display: none;
+    flex-direction: column;
+    height: 20px;
+    justify-content: space-between;
+    position: relative;
+    margin-right: 30px;
+}
+
+.menu-toggle input {
+    position: absolute;
+    width: 40px;
+    height: 30px;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: white;
+    border-radius: 3px;
+    transition: all 0.5s;
+}
+
+
+/*animasi toggle*/
+
+.menu-toggle span:nth-child(2) {
+    transform-origin: 0 0;
+}
+
+.menu-toggle span:nth-child(4) {
+    transform-origin: 0 100%;
+}
+
+.menu-toggle input:checked~span:nth-child(2) {
+    transform: rotate(45deg) translate(-1px, -1px);
+}
+
+.menu-toggle input:checked~span:nth-child(4) {
+    transform: rotate(-45deg) translate(-1px, 0);
+}
+
+.menu-toggle input:checked~span:nth-child(3) {
+    opacity: 0;
+    transform: scale(0);
+}
+
+.menu ul li a:hover {
+    color: #9DF3C4;
+}
+
+.brand {
+    float: left;
+    margin-top: 5px;
+    margin-left: 37px;
+}
+
+.img-brand {
+    height: 70px;
+    width: 240px;
+}
+
+.footer {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #1FAB98;
+    color: white;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.comment {
+    background: white;
+    padding: 40px;
+    padding-top: 30px;
+    width: 65%;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    text-align: justify;
+    color: #62D2A2;
+    font-family: 'Calibri';
+}
+
+.comment-text {
+    background: white;
+    width: 65%;
+    font-family: 'Calibri';
+    padding: 15px 40px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    text-align: justify;
+    color: #62D2A2;
+}
+
+.kolom {
+    background: white;
+    padding: 40px;
+    padding-top: 30px;
+    width: 65%;
+    margin-top: 110px;
+    margin-bottom: 5px;
+    text-align: left;
+    color: #62D2A2;
+    font-family: 'Calibri';
+    text-decoration: none;
+}
+
+.username {
+    float: left;
+}
+
+.time-min {
+    float: right;
+}
+
+.keluhan {
+    font-size: 18px;
+}
+
+.tag {
+    float: left;
+    color: darkgray;
+    margin-left: -40px;
+}
+
+.tag ul li {
+    list-style: none;
+    float: left;
+    margin-right: 8px;
+    font-size: 15px;
+}
+
+.status {
+    font-style: italic;
+    font-family: 'Calibri';
+    color: silver;
+}
+
+input {
+    text-align: left;
+    font-family: sans-serif;
+    font-size: 16px;
+    transition: border 0.5s;
+    outline: none;
+    color: #1FAB98;
+}
+
+textarea {
+    width: 100%;
+    height: auto;
+    border: none;
+    border-bottom: 1px solid #62D2A2;
+    font-family: sans-serif;
+    font-size: 16px;
+    font-weight: 200px;
+    color: #62D2A2;
+}
+
+button{
+    border: none;
+    width: 100px;
+    background: #D7FBE8;
+    color: #1FAB98;
+    font-size: 16px;
+    line-height: 25px;
+    padding: 2px 0;
+    border-radius: 15px;
+    cursor: pointer;
+    text-align: center;
+}
+
+button:hover {
+    color: #fff;
+    background-color: #1FAB98;
+}
+
+::placeholder {
+    color: #1FAB98;
+    opacity: 0.3;
+}
+
+* {
+    margin: 0px auto;
+    padding: 0px auto;
+}
+
+@media screen and (max-width: 765px) {
+    nav ul {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 40%;
+        height: 100vh;
+        justify-content: space-evenly;
+        flex-direction: column;
+        background-color: #1FAB98;
+        transform: translateX(100%);
+        transition: all 1s;
+        opacity: 0
+    }
+    nav ul.slide {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    .menu-toggle {
+        display: flex;
+    }
+    .tag ul li {
+        font-size: 12px;
+        margin-right: 6px;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .keluhan {
+        font-size: 16px;
+    }
+    .kolom {
+        padding: 20px;
+        width: 80%;
+        font-size: 14px;
+    }
+    .comment {
+        padding: 20px;
+        width: 80%;
+        text-align: left;
+    }
+    .comment-text {
+        padding-left: 20px;
+        padding-right: 20px;
+        width: 80%;
+    }
+    .tag ul li {
+        font-size: 10px;
+        margin-right: 5px;
+    }
+    .menu-toggle {
+        margin-right: 10px;
+    }
+    .brand {
+        margin-left: 5px;
+    }
+}

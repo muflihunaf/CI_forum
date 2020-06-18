@@ -1,0 +1,580 @@
+body {
+    overflow-x: hidden;
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
+    background-color: #D7FBE8;
+    background-attachment: fixed;
+}
+
+.header {
+    height: 80px;
+    background: #1FAB98;
+    width: 100%;
+    position: fixed;
+    z-index: 2;
+}
+
+nav ul {
+    display: flex;
+}
+
+.menu {
+    float: right;
+    margin-top: 25px;
+}
+
+.menu ul li {
+    list-style: none;
+    float: right;
+}
+
+.menu ul li a {
+    margin-right: 20px;
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.menu-toggle {
+    padding-top: 5px;
+    display: none;
+    flex-direction: column;
+    height: 20px;
+    justify-content: space-between;
+    position: relative;
+    margin-right: 30px;
+}
+
+.menu-toggle input {
+    position: absolute;
+    width: 40px;
+    height: 30px;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: white;
+    border-radius: 3px;
+    transition: all 0.5s;
+}
+
+
+/*animasi toggle*/
+
+.menu-toggle span:nth-child(2) {
+    transform-origin: 0 0;
+}
+
+.menu-toggle span:nth-child(4) {
+    transform-origin: 0 100%;
+}
+
+.menu-toggle input:checked~span:nth-child(2) {
+    transform: rotate(45deg) translate(-1px, -1px);
+}
+
+.menu-toggle input:checked~span:nth-child(4) {
+    transform: rotate(-45deg) translate(-1px, 0);
+}
+
+.menu-toggle input:checked~span:nth-child(3) {
+    opacity: 0;
+    transform: scale(0);
+}
+
+.line {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 40%;
+}
+
+.title {
+    font-size: 20px;
+    font-family: 'Lucida Sans';
+    text-align: center;
+    color: #1FAB98;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+.judul {
+    background: url('../img/bg-title.png');
+    width: 70%;
+    background-size: cover;
+    padding-bottom: 50px;
+    height: 200px;
+    padding-top: 40px;
+}
+
+.container {
+    width: 70%;
+    font-family: 'Calibri';
+    color: #1FAB98;
+    font-size: 16px;
+    text-align: left;
+}
+
+.container ol {
+    margin-left: -25px;
+}
+
+.cont-title {
+    color: #1FAB98;
+}
+
+.plot ul li {
+    list-style: none;
+}
+
+.plot ul {
+    display: inline-block;
+    padding-left: 30px;
+    padding-right: 30px;
+    position: relative;
+}
+
+.line-plot {
+    z-index: -1;
+    position: absolute;
+    top: 40px;
+    left: 60px;
+    width: 100%;
+    height: 5px;
+    background-color: #1FAB98;
+}
+
+.plot {
+    text-align: center;
+    color: #1FAB98;
+    width: 100%;
+}
+
+.plot h2 {
+    color: #1FAB98;
+}
+
+.bg-plot {
+    width: 80px;
+    height: 80px;
+    background: white;
+    border-radius: 50%;
+    align-items: center;
+    margin-bottom: 5px;
+    box-shadow: 0 0 3px 3px #1FAB98;
+}
+
+.bg-plot:hover {
+    box-shadow: 0 0 6px 6px #1FAB98;
+}
+
+.img-plot {
+    width: 50px;
+    height: 45px;
+    padding-top: 17px;
+}
+
+.img-plot1 {
+    width: 45px;
+    height: 50px;
+    padding-top: 14px;
+}
+
+.icon-text {
+    display: none;
+}
+
+.list-plot {
+    text-align: center;
+    padding: 40px;
+    padding-top: 30px;
+    width: 70%;
+    margin-top: 15px;
+    border-radius: 20px;
+    color: #1FAB98;
+}
+
+.list-plot ul {
+    list-style: none;
+    display: inline-flex;
+    margin-left: -50px;
+}
+
+.list-plot ul li {
+    margin: 10px;
+}
+
+.list-jummlah-comp {
+    font-size: 25px;
+    text-align: center;
+    font-family: 'Calibri';
+    padding: 20px;
+    width: 70%;
+    background: url('../img/bg-jumlah.png');
+    background-size: cover;
+}
+
+.list-jummlah-comp h3,
+.list-jummlah-comp h2,
+.list-jummlah-comp h1 {
+    font-family: 'open sans';
+    color: #D7FBE8;
+}
+
+.list-jummlah-comp ul {
+    list-style: none;
+    display: inline-flex;
+    margin-left: -30px;
+    margin-top: 30px;
+}
+
+.list-jummlah-comp ul li {
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+.menu ul li a:hover {
+    color: #9DF3C4;
+}
+
+.brand {
+    float: left;
+    margin-top: 5px;
+    margin-left: 30px;
+}
+
+.img-brand {
+    height: 70px;
+    width: 240px;
+}
+
+input {
+    width: 100%;
+    text-align: left;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #62D2A2;
+    font-family: sans-serif;
+    font-size: 16px;
+    font-weight: 200px;
+    padding: 10px 0;
+    transition: border 0.5s;
+    outline: none;
+    color: #62D2A2;
+}
+
+input[type=button] {
+    border: none;
+    width: 190px;
+    background: #1FAB98;
+    color: #fff;
+    font-size: 16px;
+    line-height: 25px;
+    padding: 10px 0;
+    border-radius: 15px;
+    cursor: pointer;
+    text-align: center;
+}
+
+input[type=button]:hover {
+    color: #1FAB98;
+    background-color: #62D2A2;
+}
+
+h2 {
+    color: white;
+}
+
+a {
+    color: white;
+    padding: 7px;
+}
+
+a:hover {
+    color: yellow;
+}
+
+::placeholder {
+    color: #62D2A2;
+    opacity: 0.8;
+}
+
+.footer {
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #1FAB98;
+    color: white;
+    text-align: center;
+    margin-top: 50px;
+}
+
+* {
+    margin: 0px auto;
+    padding: 0px auto;
+}
+
+.complain {
+    text-align: center;
+    background: #fff;
+    padding: 40px;
+    padding-top: 30px;
+    width: 65%;
+    margin-top: 50px;
+    border-radius: 20px;
+    color: #62D2A2;
+}
+
+.complain:hover {
+    box-shadow: 0px 0px 4px 4px #1FAB98;
+}
+
+textarea,
+label,
+select {
+    width: 100%;
+    height: auto;
+    border: none;
+    border-bottom: 1px solid #62D2A2;
+    font-family: sans-serif;
+    font-size: 16px;
+    font-weight: 200px;
+    color: #62D2A2;
+}
+
+h1 {
+    color: #1FAB98;
+    padding-top: 25px;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+.fileUpload {
+    position: relative;
+    overflow: hidden;
+    margin: 10px;
+}
+
+.fileUpload input.upload {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+
+
+/* Pengaduan Terpopuler */
+
+.kolom {
+    background: white;
+    padding: 20px;
+    width: 90%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    text-align: left;
+    color: #62D2A2;
+    font-family: 'Calibri';
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.link-kolom {
+    text-decoration: none;
+}
+
+.link-kolom :hover {
+    color: #1FAB98;
+}
+
+.kolom:hover {
+    box-shadow: 0 0 3px 3px #1FAB98;
+}
+
+.kolom h2 {
+    color: #62D2A2;
+}
+
+.username {
+    float: left;
+}
+
+.time-min {
+    float: right;
+}
+
+.keluhan {
+    font-size: 16px;
+}
+
+.tag {
+    float: left;
+    color: darkgray;
+    margin-left: -40px;
+}
+
+.tag ul li {
+    list-style: none;
+    float: left;
+    margin-right: 8px;
+    font-size: 15px;
+}
+
+.status {
+    font-style: italic;
+    font-family: 'Calibri';
+    color: silver;
+}
+
+.hangat {
+    width: 70%;
+    height: 350px;
+    overflow: scroll;
+    padding: 35px;
+    background: #D7FBE8;
+    padding-top: 10px;
+    overflow-x: hidden;
+}
+
+.title-hangat h2 {
+    text-align: center;
+    color: #1FAB98;
+    margin: 30px;
+    font-size: 30px;
+}
+
+@media screen and (max-width: 800px) {
+    nav ul {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 40%;
+        height: 100vh;
+        justify-content: space-evenly;
+        flex-direction: column;
+        background-color: #1FAB98;
+        transform: translateX(100%);
+        transition: all 1s;
+        opacity: 0
+    }
+    nav ul.slide {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    .menu-toggle {
+        display: flex;
+    }
+    .container {
+        width: 80%;
+    }
+    .plot ul {
+        display: flex;
+        margin: 30px;
+    }
+    .icon-text {
+        display: inline-block;
+        width: 100%;
+        text-align: left;
+    }
+    .icon-text h4 {
+        text-align: center;
+    }
+    .line-plot {
+        display: none;
+    }
+    .list-plot {
+        display: none;
+    }
+    .bg-plot {
+        width: 100px;
+        height: 100px;
+    }
+    .img-plot {
+        width: 68px;
+        height: 60px;
+        padding-top: 20px;
+    }
+    .img-plot1 {
+        width: 60px;
+        height: 68px;
+        padding-top: 13px;
+    }
+    .list-jummlah-comp {
+        font-size: 20px;
+    }
+    .list-jummlah-comp ul li {
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+    .judul {
+        font-size: 14px;
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 620px) {
+    .container {
+        width: 90%;
+    }
+    .judul {
+        width: 100%;
+        font-size: 13px;
+    }
+    .title {
+        font-size: 15px;
+    }
+    .line {
+        width: 60%;
+    }
+    .tag ul li {
+        font-size: 12px;
+        margin-right: 6px;
+    }
+    .list-jummlah-comp {
+        font-size: 14px;
+    }
+    .list-jummlah-comp ul li {
+        margin-left: 18px;
+        margin-right: 18px;
+    }
+    .hangat {
+        width: 80%;
+    }
+    .title-hangat h2 {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .hangat {
+        padding-left: 25px;
+    }
+    .tag ul li {
+        font-size: 8.5px;
+        margin-right: 4px;
+    }
+    .menu-toggle {
+        margin-right: 10px;
+    }
+    .brand {
+        margin-left: 5px;
+    }
+    .list-jummlah-comp {
+        font-size: 10px;
+    }
+    .list-jummlah-comp ul li {
+        margin-left: 11px;
+        margin-right: 11px;
+    }
+    .judul {
+        height: none;
+    }
+}
