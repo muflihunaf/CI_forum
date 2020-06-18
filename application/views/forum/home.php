@@ -48,15 +48,14 @@
 		<div class="row">
 			<?php foreach ($data as $item) { ?>
 			<div class="column">
-				<div class="card">
+				<div class="card wow slideInLeft">
 					<div class="username"><?= $item['username'] ?></div>
 					<div class="time-min"><?= $item['tanggal']; ?></div><br>
-					<a href="<?= base_url('forum/index/'. $item['id_keluhan']) ?>" class="title"><?= $item['judul'] ?></a>
+					<a href="<?= base_url('forum/index/'. $item['id_keluhan']) ?>" class="title-com"><?= $item['judul'] ?></a>
 					<div class="status"><?= $item['status'] ?></div>
 					<div class="tag">
 						<ul>
 							<li><?= $item['nama_kategori'] ?></li>
-							<li>|</li>
 						</ul>
 					</div>
 				</div>
